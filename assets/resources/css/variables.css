@@ -1,0 +1,37 @@
+:root {
+  --black: #0f0f1f;
+  --white: #fff;
+  --gray: #cccccc;
+  --dark-gray: #979797;
+
+  --red: #bd2d2d;
+  --green: #39aa36;
+  --blue: #3f5fcf;
+
+  --dark-green: #1f691d;
+
+  --fade-black: #0f0f1fd2;
+  --fade-white: #ffffff1e;
+
+  --instant: 0.2s;
+  --fast: 0.3s;
+  --delayed-fast: 0.3s 0.3s;
+  --slow: 0.5s;
+
+  --delay: 0s 0.3s;
+
+  --slide-1: url("../../images/slide/1.JPG");
+  --slide-2: url("../../images/slide/2.jpg");
+  --slide-3: url("../../images/slide/3.jpg");
+  --slide-4: url("../../images/slide/4.JPG");
+  --slide-5: url("../../images/slide/5.jpg");
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}

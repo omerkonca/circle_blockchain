@@ -1,0 +1,1079 @@
+/* =========={ Loading }========================================================================================== */
+
+#loading,
+#input-loading {
+  width: 110rem;
+  height: 110vh;
+  position: fixed;
+  top: -5vh;
+  left: -115rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  opacity: 0;
+  transition: opacity var(--fast), left var(--delay);
+}
+
+#loading {
+  flex-direction: column;
+  background-color: var(--white);
+  z-index: 80;
+}
+
+#input-loading {
+  color: var(--white);
+  background-color: var(--fade-black);
+  z-index: 150;
+}
+
+#loading img {
+  margin-top: -20rem;
+  width: 50rem;
+}
+
+#loading.loading {
+  left: -5rem;
+  opacity: 1;
+  transition: left 0s;
+}
+
+#input-loading.loading {
+  left: -5rem;
+  opacity: 1;
+  transition: left 0s;
+}
+
+/* =========={ Navigation }========================================================================================== */
+
+nav {
+  width: 100rem;
+  background-color: var(--white);
+  height: 15rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rem solid var(--gray);
+  transition: height var(--fast);
+  font-size: 3rem;
+  font-weight: 500;
+  z-index: 90;
+}
+
+.initial nav {
+  height: 18rem;
+}
+
+nav > img {
+  cursor: pointer;
+}
+
+h1 {
+  display: none;
+  cursor: pointer;
+}
+
+nav > span {
+  font-size: 4rem;
+  color: var(--green);
+  font-style: italic;
+}
+
+#navigation {
+  display: flex;
+  margin-left: auto;
+  height: 100%;
+}
+
+#navigation i {
+  font-size: 6rem;
+  margin: 1rem 0;
+}
+
+#navigation div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+#navigation div:last-of-type {
+  padding-right: 4rem;
+}
+
+/* =========={ Navigation Bottom }================================================================================ */
+
+#navigation-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100rem;
+  height: 15rem;
+  background-color: var(--white);
+  border-top: 1rem solid var(--gray);
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 500;
+  z-index: 90;
+}
+
+#navigation-bottom div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 25rem;
+  transition: background-color var(--fast), color var(--fast);
+}
+
+#navigation-bottom i {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+
+#navigation-bottom div.selected {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+/* =========={ Pop-Up }========================================================================================== */
+
+#pop-up {
+  width: 110rem;
+  height: 110vh;
+  background-color: var(--fade-black);
+  position: fixed;
+  top: -5vh;
+  left: -115rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding-top: 50rem;
+  transition: opacity var(--fast), padding-top var(--fast), left var(--delay);
+}
+
+#pop-up.active {
+  padding-top: 0;
+  left: -5rem;
+  opacity: 1;
+  transition: opacity var(--fast), padding-top var(--fast);
+}
+
+#pop-up section {
+  width: 90rem;
+  min-height: 45rem;
+  background-color: var(--white);
+  padding: 5rem;
+  font-size: 4rem;
+  position: absolute;
+  opacity: 0;
+  transition: opacity var(--fast);
+}
+
+#pop-up section.displayed {
+  opacity: 1;
+  z-index: 100;
+}
+
+#pop-up h4 {
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+#pop-up .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--red);
+  z-index: 1000;
+}
+
+/* =========={ Main }========================================================================================== */
+
+main {
+  padding: 15rem 0;
+  transition: padding var(--fast);
+  font-size: 5rem;
+}
+
+.initial main {
+  padding: 18rem 0 15rem;
+}
+
+main > section {
+  display: none;
+  min-height: calc(100vh - 60rem);
+  padding-bottom: 5rem;
+}
+
+main > section.active {
+  display: block;
+}
+
+main > section > p {
+  margin: 15rem 5rem;
+}
+
+main > section > img {
+  margin: 0 5rem;
+  width: 90rem;
+  border-radius: 3rem;
+}
+
+main > section > h2 {
+  font-size: 8rem;
+  font-weight: 200;
+  text-align: center;
+  margin: 5rem 0 10rem;
+}
+
+/* =========={ Login, Register, Order }========================================================================================== */
+
+#login input,
+#register input,
+#register textarea,
+#order input,
+#order textarea,
+#order select {
+  display: block;
+  width: 100%;
+  border: 1rem solid var(--gray);
+  font-size: 4rem;
+  transition: border var(--fast);
+  border-radius: 10rem;
+  padding: 1rem 3rem 1rem 9rem;
+}
+
+#login input:focus,
+#register input:focus,
+#register textarea:focus,
+#order input:focus,
+#order textarea:focus,
+#order select:focus {
+  border: 1rem solid var(--blue);
+}
+
+#register textarea,
+#order textarea {
+  border-radius: 5rem;
+}
+
+#login > div,
+#register #register-phase > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+#login > div > div,
+#register #register-phase > div > div,
+#order > div {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+#login > div > div i,
+#register #register-phase > div > div i,
+#order > div > i {
+  color: var(--blue);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  transition: color var(--fast);
+}
+
+#login button,
+#register button,
+#order button {
+  font-size: 4rem;
+  background-color: var(--blue);
+  font-weight: 500;
+  color: var(--white);
+  padding: 1rem 5rem;
+  border-radius: 10rem;
+  margin-bottom: 3rem;
+}
+
+#login button i,
+#register button i,
+#order button i {
+  margin-right: 0.5rem;
+}
+
+#login hr,
+#register hr {
+  margin-bottom: 3rem;
+}
+
+#login span,
+#register span {
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+#login span:last-of-type,
+#register span:last-of-type {
+  margin-bottom: 0;
+}
+
+#register-phase {
+  position: relative;
+  transition: height var(--slow);
+}
+
+#register-phase > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity var(--fast);
+}
+
+#register-phase.first .checkbox {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  margin: 0 1rem 0 0;
+  border: 1rem solid var(--red);
+  background-color: transparent;
+  transition: border-color var(--fast), background-color var(--fast);
+}
+
+#register-phase.first .checkbox.checked {
+  border-color: var(--dark-green);
+  background-color: var(--green);
+}
+
+#register-phase > div:nth-of-type(2) p {
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#register-phase.first {
+  height: 50rem;
+}
+
+#register-phase.second {
+  height: 50rem;
+}
+
+#register-phase.third {
+  height: 90rem;
+}
+
+#register-phase.first > :first-of-type,
+#register-phase.second > :nth-of-type(2),
+#register-phase.third > :last-of-type {
+  opacity: 1;
+  transition: opacity var(--delayed-fast);
+  z-index: 110;
+}
+
+#order > div.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+#order > div.checkbox > .checkbox {
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  margin: 0 2.5rem 0 0;
+  border: 1rem solid var(--red);
+  background-color: transparent;
+  transition: border-color var(--fast), background-color var(--fast);
+}
+
+#order > div.checkbox > .checkbox.checked {
+  border-color: var(--dark-green);
+  background-color: var(--green);
+}
+
+#order > div.checkbox > span {
+  width: calc(100% - 7.5rem);
+}
+
+#order > div.checkbox > span > a {
+  color: var(--blue);
+}
+
+#order > div > span {
+  font-size: 4rem;
+}
+
+#register span a {
+  color: var(--blue);
+}
+
+#register .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.cancel {
+  background-color: var(--red) !important;
+}
+
+/* =========={ Footer }========================================================================================== */
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 5rem;
+}
+
+footer h2 {
+  margin-bottom: 5rem;
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+footer span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+footer span i {
+  margin-right: 1rem;
+}
+
+footer p {
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* =========={ Slide }========================================================================================== */
+
+#slide {
+  height: 150rem;
+  position: relative;
+}
+
+#slide > div {
+  width: 500rem;
+  display: flex;
+  height: 100%;
+  transition: transform var(--fast);
+}
+
+#slide button {
+  position: absolute;
+  width: 15rem;
+  height: 100%;
+  top: 0;
+  font-size: 10rem;
+  background-color: transparent;
+  color: var(--fade-white);
+  transition: var(--fast);
+}
+
+#slide button.active {
+  color: var(--white);
+}
+
+#slide #slide-left {
+  left: 0;
+}
+
+#slide #slide-right {
+  right: 0;
+}
+
+#slide > div > div {
+  width: 100rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#slide .slide-1 {
+  background-image: var(--slide-1);
+}
+
+#slide .slide-2 {
+  background-image: var(--slide-2);
+}
+
+#slide .slide-3 {
+  background-image: var(--slide-3);
+}
+
+#slide .slide-4 {
+  background-image: var(--slide-4);
+}
+
+#slide .slide-5 {
+  background-image: var(--slide-5);
+}
+
+/* =========={ Main Page }========================================================================================== */
+
+#highlighteds {
+  margin: 15rem 0;
+  color: var(--green);
+  padding: 0 3rem;
+}
+
+#highlighteds p {
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  margin-bottom: 10rem;
+}
+
+#highlighteds p:last-of-type {
+  margin-bottom: 0;
+}
+
+#highlighteds p:nth-of-type(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+#highlighteds p i {
+  font-size: 12rem;
+}
+
+#highlighteds p:nth-of-type(odd) i {
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
+
+#highlighteds p:nth-of-type(even) i {
+  margin-right: 2rem;
+  margin-left: 3rem;
+}
+
+/* =========={ Menu, Language }================================================================================ */
+
+#menu button,
+#language button {
+  display: block;
+  background-color: transparent;
+  font-size: 5rem;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+}
+
+#menu button i {
+  color: var(--blue);
+}
+
+#language button img {
+  width: 10rem;
+  margin: 1rem;
+}
+
+#language button {
+  display: flex;
+  align-items: center;
+}
+
+/* =========={ Menus }========================================================================================== */
+
+.menu {
+  position: relative;
+  margin: 0 3rem 5rem;
+  padding: 3rem 3rem 0;
+  border-radius: 3rem;
+  box-shadow: 0.5rem 0.5rem 3rem var(--dark-gray);
+  transition: padding var(--fast), box-shadow var(--fast);
+}
+
+.menu:last-of-type {
+  margin-bottom: 0;
+}
+
+.menu.expanded {
+  box-shadow: 0 0 3rem var(--green);
+  padding: 3rem;
+}
+
+.menu .expand {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  transition: transform var(--fast);
+}
+
+.menu.expanded .expand {
+  transform: rotate(-90deg);
+}
+
+.menu .menu-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.menu .menu-heading > img {
+  width: 35rem;
+  padding-right: 3rem;
+}
+
+.menu .menu-heading > div {
+  width: 53rem;
+}
+
+.menu .menu-heading > div h4 {
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.menu .menu-heading > div button {
+  color: var(--white);
+  background-color: var(--blue);
+  font-size: 4rem;
+  font-weight: 500;
+  padding: 1rem 5rem;
+  border-radius: 10rem;
+  margin-top: 2rem;
+}
+
+.menu .menu-heading > div button i {
+  margin-right: 0.5rem;
+}
+
+.menu .menu-body {
+  overflow-y: hidden;
+  max-height: 0;
+  transition: max-height var(--fast);
+}
+
+.menu.expanded .menu-body {
+  max-height: 500rem;
+}
+
+.menu .menu-body hr {
+  margin-bottom: 4rem;
+}
+
+.menu .menu-body h5 {
+  font-size: 8rem;
+  color: var(--blue);
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.menu .menu-body p {
+  margin-bottom: 4rem;
+}
+
+.menu .menu-body img,
+.menu .menu-body video,
+.menu .menu-body iframe {
+  width: 100%;
+  margin-bottom: 4rem;
+  border-radius: 3rem;
+}
+
+.menu .menu-body iframe {
+  height: 50rem;
+}
+
+.menu .menu-body h6 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 4rem;
+}
+
+/* =========={ More }========================================================================================== */
+
+.blog {
+  margin: 0 3rem 5rem;
+  padding: 3rem;
+  box-shadow: 0.5rem 0.5rem 3rem var(--dark-gray);
+  border-radius: 3rem;
+  overflow: auto;
+}
+
+.blog:last-of-type {
+  margin-bottom: 0;
+}
+
+.blog h4 {
+  margin-bottom: 3rem;
+}
+
+.blog > img {
+  float: left;
+  width: 45rem;
+  height: 40rem;
+  margin: 0 3rem 3rem 0;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+
+.blog .blog-content {
+  position: fixed;
+  width: 100rem;
+  height: calc(100vh - 18rem);
+  left: 0;
+  bottom: calc(18rem - 105vh);
+  background-color: var(--white);
+  z-index: 110;
+  transition: bottom var(--fast);
+  overflow-y: scroll;
+  padding: 5rem;
+}
+
+.blog .close {
+  position: fixed;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3000;
+  padding: 2rem 2.5rem;
+  border-radius: 10rem;
+  color: var(--red);
+  background-color: var(--fade-black);
+  transition: top var(--fast);
+}
+
+.blog.displayed .blog-content {
+  bottom: 0;
+}
+
+.blog.displayed .close {
+  top: 5rem;
+}
+
+.blog .blog-content h5 {
+  font-size: 10rem;
+  font-weight: 300;
+  margin-bottom: 10rem;
+  color: var(--blue);
+}
+
+.blog .blog-content p {
+  margin-bottom: 5rem;
+}
+
+.blog .blog-content img,
+.blog .blog-content video,
+.blog .blog-content iframe {
+  width: 100%;
+  margin-bottom: 5rem;
+  border-radius: 3rem;
+}
+
+.blog .blog-content iframe {
+  height: 50rem;
+}
+
+.blog .blog-content hr {
+  margin-bottom: 5rem;
+}
+
+.blog .blog-content h6 {
+  font-size: 6rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 5rem;
+}
+
+/* =========={ Notification }========================================================================================== */
+
+#notification {
+  position: fixed;
+  z-index: 2000;
+  top: -25rem;
+  left: 5rem;
+  width: 90rem;
+  font-size: 4rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blue);
+  transition: top var(--slow);
+}
+
+#notification.displayed {
+  top: 5rem;
+}
+
+.fetch-error {
+  color: var(--red);
+  text-align: center;
+}
+
+#redirected-notification {
+  padding: 10rem;
+  color: var(--blue);
+  font-weight: 500;
+  display: none;
+}
+
+/* =========={ User }========================================================================================== */
+
+#user #user-information {
+  display: flex;
+  justify-content: center;
+  padding: 10rem 5rem 0;
+  max-width: 100rem;
+  overflow: hidden;
+}
+
+#user #user-information > div {
+  max-width: 60rem;
+  overflow-wrap: break-word;
+}
+
+#user #user-picture {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 100rem;
+}
+
+#user #user-picture-default {
+  font-size: 30rem;
+}
+
+#user #user-information > div {
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#user #user-information > div > span:not(:last-of-type) {
+  margin-bottom: 2.5rem;
+}
+
+#user #user-name {
+  font-size: 6rem;
+  font-weight: 600;
+  margin-left: -2rem;
+}
+
+#user #user-email {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+#user #user-phone {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4rem;
+  margin-left: -2rem;
+}
+
+#user > span {
+  display: block;
+  color: var(--blue);
+  margin: 15rem 5rem 2rem;
+  font-weight: 600;
+}
+
+#user p {
+  margin: 2rem 5rem 5rem;
+}
+
+#user button {
+  padding: 2rem 6rem;
+  font-size: 4rem;
+  color: var(--white);
+  border-radius: 10rem;
+  display: block;
+}
+
+/* #user #user-edit {
+  background-color: var(--green);
+  margin: 7.5rem 5rem 2.5rem;
+} */
+
+/* #user #user-logout {
+  background-color: var(--red);
+  margin: 0 5rem 10rem;
+} */
+
+#user #user-logout {
+  background-color: var(--red);
+  margin: 7.5rem 5rem 2.5rem;
+}
+
+#user ul {
+  margin: 0 5rem 5rem;
+}
+
+#user li {
+  margin-top: 5rem;
+}
+
+#user li span:not(:first-of-type) {
+  display: block;
+  margin-left: 7rem;
+}
+
+/* =========={ Order }========================================================================================== */
+
+#order {
+  padding: 0 15rem;
+}
+
+#order .normal {
+  padding: 1rem 3rem;
+}
+
+#order > span {
+  display: block;
+  font-size: 4rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#order hr {
+  margin: 15rem 0;
+}
+
+#order p {
+  margin: 3rem 0;
+  font-size: 4rem;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+#order #order-menu {
+  border: 1rem solid var(--red);
+  padding: 4rem;
+  text-align: center;
+  border-radius: 5rem;
+  cursor: pointer;
+  color: var(--red);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#order #order-menu img {
+  margin-bottom: 4rem;
+}
+
+#order #order-price {
+  margin: 3rem 15rem;
+  border: 1rem solid var(--green);
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  color: var(--green);
+  font-weight: 600;
+}
+
+#order #order-price span {
+  font-size: 3rem;
+  color: var(--black);
+  text-decoration: line-through;
+  margin-left: 1rem;
+}
+
+#order button {
+  display: block;
+  padding: 1.5rem 5rem;
+  margin: 10rem auto 20rem;
+}
+
+#order .disabled {
+  display: none;
+}
+
+#order #order-promotion-status {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+}
+
+#order #order-promotion-status i {
+  display: none;
+}
+
+#order #order-promotion-status.loading {
+  color: var(--black);
+}
+
+#order #order-promotion-status.success {
+  color: var(--green);
+}
+
+#order #order-promotion-status.error {
+  color: var(--red);
+}
+
+#order #order-promotion-status.loading i:nth-of-type(1) {
+  display: block;
+}
+
+#order #order-promotion-status.success i:nth-of-type(2) {
+  display: block;
+}
+
+#order #order-promotion-status.error i:nth-of-type(3) {
+  display: block;
+}
+
+#order #order-promotion-status.success + input {
+  font-weight: 600;
+  color: var(--green);
+}
+
+#order #order-promotion-status.error + input {
+  font-weight: 600;
+  color: var(--red);
+}
+
+#order-type {
+  display: flex;
+  align-items: center;
+}
+
+#order #order-individual,
+#order #order-company {
+  margin: 5rem auto;
+  background-color: var(--gray);
+  transition: background-color var(--fast);
+}
+
+#order #order-individual.active,
+#order #order-company.active {
+  background-color: var(--blue);
+}
+
+#order .company {
+  display: none;
+}
+
+/* =========={ Balance }========================================================================================== */
+
+#user-balance {
+  margin: 2rem 5rem 0;
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+#order-balance {
+  text-align: center;
+}

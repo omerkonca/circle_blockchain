@@ -1,0 +1,72 @@
+@import url("./variables.css?v=0.9");
+@import url("./mobile.css?v=0.9");
+@import url("./desktop.css?v=0.9");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--black);
+  font-family: Inter, sans-serif;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  border: none;
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  border: 0.5rem solid var(--gray);
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: "➤ ";
+}
+
+/* =========={ Extra }========================================================================================== */
+
+#upload-image-canvas {
+  display: none;
+}
+
+#sdkIframe {
+  width: 100vw;
+  height: 100vh;
+}
