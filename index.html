@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/resources/css/main.css?v=0.9" />
+    <title>Fit4U</title>
+  </head>
+  <body class="initial">
+    <section id="loading">
+      <img src="./assets/images/temporary/logo.jpg" alt="Logo" />
+      <i class="fa-solid fa-circle-notch fa-spin"></i>
+    </section>
+    <section id="input-loading">
+      <i class="fa-solid fa-circle-notch fa-spin"></i>
+    </section>
+    <section id="notification"></section>
+    <section id="pop-up">
+      <section id="login">
+        <i class="fa-solid fa-xmark close"></i>
+        <h4>Giriş Yap</h4>
+        <div>
+          <div>
+            <input type="email" placeholder="E-posta" />
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <input type="password" placeholder="Şifre" />
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <button><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</button>
+        </div>
+        <hr />
+        <span id="forgot-password-from-login"><u>Şifremi Unuttum</u></span>
+        <span id="register-from-login"
+          >Üye değil misiniz? Hemen <i class="fa-solid fa-user-pen"></i> <u>Üye Ol</u></span
+        >
+      </section>
+      <section id="register">
+        <i class="fa-solid fa-xmark close"></i>
+        <h4>Üye Ol</h4>
+        <div id="register-phase" class="first">
+          <div>
+            <div>
+              <input type="email" placeholder="E-posta" />
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span>
+              <button class="checkbox"></button>
+              <a href="./kvkk-onay-sözleşmesi.html" target="_blank">KVKK Onay Sözleşmesi</a> metnini kabul ediyorum.
+            </span>
+            <button id="register-first"><i class="fa-solid fa-right-to-bracket"></i> Devam</button>
+            <hr />
+            <span id="login-from-register"
+              >Zaten üye misiniz? Hemen <i class="fa-solid fa-user"></i> <u>Giriş Yap</u></span
+            >
+          </div>
+          <div>
+            <p>
+              Servis yoğunluğuna göre süre etkilenecektir, lütfen bekleyiniz. Doğrulama kodunu bulamadıysanız spam
+              klasörünü kontrol ediniz.
+            </p>
+            <div>
+              <input type="text" placeholder="Doğrulama Kodu" />
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <p class="button">
+              <button id="register-second"><i class="fa-solid fa-right-to-bracket"></i> Devam</button>
+              <button class="cancel" id="register-second"><i class="fa-solid fa-rotate-left"></i> İptal</button>
+            </p>
+          </div>
+          <div>
+            <div>
+              <input type="text" placeholder="İsim" />
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <input type="text" placeholder="Telefon" />
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <textarea placeholder="Adres" rows="3"></textarea>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <input type="password" placeholder="Şifre" />
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <div>
+              <input type="password" placeholder="Şifre (Tekrar)" />
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <input type="hidden" />
+            <button id="register-third"><i class="fa-solid fa-id-card"></i> Üyeliği Tamamla</button>
+            <button class="cancel" id="register-second"><i class="fa-solid fa-rotate-left"></i> İptal</button>
+          </div>
+        </div>
+      </section>
+      <section id="menu">
+        <i class="fa-solid fa-xmark close"></i>
+        <button><i class="fa-solid fa-user"></i> Giriş Yap / Üye Ol</button>
+        <hr />
+        <button><i class="fa-solid fa-house"></i> Ana Sayfa</button>
+        <hr />
+        <button><i class="fa-solid fa-utensils"></i> Menüler</button>
+        <hr />
+        <button><i class="fa-solid fa-receipt"></i> Sipariş</button>
+        <hr />
+        <button><i class="fa-solid fa-newspaper"></i> Daha Fazla</button>
+        <hr />
+        <button><i class="fa-solid fa-language"></i> Dil (Language)</button>
+      </section>
+      <section id="language">
+        <i class="fa-solid fa-xmark close"></i>
+        <button>
+          <img src="./assets/images/language/tr.png" alt="TR" />
+          Türkçe
+        </button>
+        <hr />
+        <button>
+          <img src="./assets/images/language/en.png" alt="EN" />
+          English
+        </button>
+      </section>
+      <section id="forgot-password">
+        <i class="fa-solid fa-xmark close"></i>
+        Eğer şifrenizi unuttuysanız durumu <a href="mailto:destek@fitgelsin.com">destek@fitgelsin.com</a> adresimize
+        mail olarak iletebilirsiniz.
+      </section>
+    </section>
+    <nav>
+      <img src="./assets/images/temporary/logo.jpg" alt="Logo" />
+      <h1>Fit Gelsin</h1>
+      <span>"Fit Lezzetler!"</span>
+      <div id="navigation">
+        <div style="display: none">
+          <i class="fa-solid fa-user"></i>
+          Hesabım
+        </div>
+        <div style="display: none">
+          <i class="fa-solid fa-user"></i>
+          Giriş Yap
+        </div>
+        <div>
+          <i class="fa-solid fa-user"></i>
+          Üye Ol
+        </div>
+        <div>
+          <i class="fa-solid fa-bars"></i>
+          Menü
+        </div>
+      </div>
+    </nav>
+    <section id="navigation-bottom">
+      <div class="selected">
+        <i class="fa-solid fa-house"></i>
+        Ana Sayfa
+      </div>
+      <div>
+        <i class="fa-solid fa-utensils"></i>
+        Menüler
+      </div>
+      <div>
+        <i class="fa-solid fa-receipt"></i>
+        Sipariş
+      </div>
+      <div>
+        <i class="fa-solid fa-newspaper"></i>
+        Daha Fazla
+      </div>
+    </section>
+    <main>
+      <section id="home" class="active">
+        <div id="redirected-notification"></div>
+        <div id="slide-cover">
+          <div id="slide">
+            <div data-slides="5" style="transform: translateX(0rem)">
+              <div class="slide-1"></div>
+              <div class="slide-2"></div>
+              <div class="slide-3"></div>
+              <div class="slide-4"></div>
+              <div class="slide-5"></div>
+            </div>
+            <button id="slide-left"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="slide-right"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div id="highlighteds">
+          <p>
+            <i class="fa-solid fa-wheat-awn"></i>
+            <span>"Yüksek lifli besin içeriği"</span>
+          </p>
+          <p>
+            <i class="fa-solid fa-utensils"></i>
+            <span>"Her gün tam zamanında kapında"</span>
+          </p>
+          <p>
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>"Düzenli diyetisyen takibi"</span>
+          </p>
+          <p>
+            <i class="fa-brands fa-envira"></i>
+            <span>"Doğal ve temiz besin ilkesi"</span>
+          </p>
+        </div>
+        <img src="./assets/images/stock/1.jpeg" alt="Resim" />
+        <p>
+          Beslenme, temel bir ihtiyaç. Hangi saat ve içerikte olursa olsun her gün vücuda ihtiyaç duyduğu enerji
+          dışarıdan sağlanmalıdır. Aksi durumda hızlı kilo kayıpları ve beraberinde gelen hastalıklar kaçınılmaz
+          olabilir.
+        </p>
+        <img src="./assets/images/stock/2.jpeg" alt="Resim" />
+        <p>
+          Yoğun çalışma saatleri ve gündelik sorumluluklar arasında düzenli ve dengeli beslenmek maalesef kolay değil.
+        </p>
+        <img src="./assets/images/stock/3.jpeg" alt="Resim" />
+        <p>
+          Bu ihtiyaçtan yola çıkarak siz başka önceliklerinize daha çok vakit ayırabilesiniz diye Fit4U markasını
+          yarattık.
+        </p>
+        <img src="./assets/images/stock/4.jpeg" alt="Resim" />
+        <p>Bu deneyimi tatmalısınız…</p>
+      </section>
+      <section id="menus">
+        <h2>Menüler</h2>
+      </section>
+      <section id="order">
+        <h2>Sipariş</h2>
+        <p>Menü Seçimi</p>
+        <div id="order-menu">Menü Seçiniz</div>
+        <div>
+          <select id="order-days" class="normal">
+            <!-- PHP side has control. -->
+            <option hidden selected>Gün Sayısı</option>
+            <option value="5">5 Gün</option>
+            <option value="10">10 Gün</option>
+            <option value="20">1 Aylık (20 İş Günü)</option>
+            <option value="60">3 Aylık (60 İş Günü)</option>
+          </select>
+        </div>
+        <div>
+          <select id="order-time" class="normal">
+            <option hidden selected>Teslimat Saati</option>
+            <option value="11.00 - 13.30">11.00 - 13.30</option>
+            <option value="13.30 - 16.00">13.30 - 16.00</option>
+          </select>
+        </div>
+        <div>
+          <div id="order-promotion-status">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <input id="order-promotion" type="text" placeholder="Promosyon Kodu (Opsiyonel)" />
+          <i class="fa-solid fa-percent"></i>
+        </div>
+        <div>
+          <span>Sipariş Adeti</span>
+          <input
+            id="order-amount"
+            type="number"
+            min="1"
+            value="1"
+            class="normal"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          />
+        </div>
+        <div>
+          <span>Toplam Ücret</span>
+          <p id="order-balance">Bakiye: 0$</p>
+          <p id="order-price">0$</p>
+        </div>
+        <hr />
+        <p>Sipariş Bilgileri</p>
+        <div id="order-type">
+          <button class="active" id="order-individual">Bireysel</button>
+          <button id="order-company">Kurumsal</button>
+        </div>
+        <div>
+          <input id="order-name" type="text" placeholder="İsim Soyisim" />
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+          <input id="order-phone" type="text" placeholder="Telefon" />
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div>
+          <input id="order-email" type="email" placeholder="E-posta" />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="company">
+          <input id="order-tax-number" type="text" placeholder="Vergi No / TCKN" />
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="company">
+          <input id="order-company-name" type="text" placeholder="Şirket Ünvanı" />
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="company">
+          <input id="order-tax-administration" type="text" placeholder="Vergi Dairesi" />
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="company">
+          <select id="order-tax-method">
+            <option hidden selected>E-Fatura / E-Arşiv</option>
+            <option value="e-fatura">E-Fatura</option>
+            <option value="e-arşiv">E-Arşiv</option>
+          </select>
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div>
+          <select id="order-province" class="normal"></select>
+        </div>
+        <div>
+          <select id="order-district" class="normal"></select>
+        </div>
+        <div class="company">
+          <textarea id="order-company-address" placeholder="Şirket Adresi" rows="3"></textarea>
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div>
+          <textarea id="order-address" placeholder="Teslimat Adresi" rows="3"></textarea>
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <hr />
+        <p class="individual">Kişisel Bilgiler</p>
+        <div class="individual">
+          <select id="order-gender" class="normal">
+            <option hidden selected>Cinsiyet</option>
+            <option value="0">Erkek</option>
+            <option value="1">Kadın</option>
+          </select>
+        </div>
+        <div class="individual">
+          <span>Boyunuz</span>
+          <input id="order-height" class="normal" type="number" placeholder="cm" />
+        </div>
+        <div class="individual">
+          <span>Kilonuz</span>
+          <input id="order-weight" class="normal" type="number" placeholder="kg" />
+        </div>
+        <div>
+          <span>Alerji durumu varsa belirtiniz. Yoksa "-" yazınız.</span>
+          <input id="order-allergy" class="normal" type="text" />
+        </div>
+        <div>
+          <span>Kronik hastalık durumu varsa belirtiniz. Yoksa "-" yazınız.</span>
+          <input id="order-disease" class="normal" type="text" />
+        </div>
+        <div class="individual">
+          <span>Mesleğiniz</span>
+          <input id="order-occupation" class="normal" type="text" />
+        </div>
+        <div>
+          <span>Eklemek istediğiniz varsa belirtiniz.</span>
+          <textarea id="order-extra" class="normal" rows="3"></textarea>
+        </div>
+        <div class="checkbox">
+          <button class="checkbox"></button>
+          <span>
+            <a href="./satış-sözleşmesi.html" target="_blank">Satış Sözleşmesi</a> metnini okudum ve kabul ediyorum
+          </span>
+        </div>
+        <div class="checkbox">
+          <button class="checkbox"></button>
+          <span>
+            <a href="./kvkk-onay-sözleşmesi.html" target="_blank">KVKK Onay Sözleşmesi</a> metnini okudum ve kabul
+            ediyorum
+          </span>
+        </div>
+        <button id="order-complete"><i class="fa-solid fa-credit-card"></i> Ödemeyi Tamamla</button>
+      </section>
+      <section id="more">
+        <h2>Daha Fazla</h2>
+      </section>
+      <section id="user">
+        <h2>Hesabım</h2>
+        <div id="user-information">
+          <img id="user-picture" alt="Profil Resmi" />
+          <i id="user-picture-default" class="fa-solid fa-circle-user"></i>
+          <div>
+            <span id="user-name">Kullanıcı İsmi</span>
+            <span id="user-email">Kullanıcı E-postası</span>
+            <span id="user-phone">Kullanıcı Telefonu</span>
+          </div>
+        </div>
+        <h6 id="user-balance">Bakiye: 0$</h6>
+        <span>Adres</span>
+        <p id="user-address">Adresi Bilgisi</p>
+        <!-- <button id="user-edit"><i class="fa-solid fa-pen-to-square"></i> Bilgileri Düzenle</button> -->
+        <button id="user-logout"><i class="fa-solid fa-right-from-bracket"></i> Çıkış Yap</button>
+        <span>Tüm Siparişlerim</span>
+        <ul id="user-orders"></ul>
+        <!-- <input id="upload-image" type="file" accept="image/*" /> -->
+      </section>
+      <footer>
+        <h2>İletişim</h2>
+        <span>
+          <i class="fa-solid fa-location-dot"></i> Köprülü Veysipaşa Mahallesi 1609. Sokak No:1 Efeler / Aydın</span
+        >
+        <span><i class="fa-solid fa-envelope"></i> info@fitgelsin.com</span>
+        <span><i class="fa-solid fa-phone"></i> +90 850 582 3041</span>
+        <span><i class="fa-brands fa-instagram"></i> fitgelsin</span>
+        <p>Fit Gelsin &copy; Tüm hakları saklıdır.</p>
+      </footer>
+    </main>
+    <canvas id="upload-image-canvas"></canvas>
+    <script src="./assets/resources/js/W3SSDK.js?v=0.9"></script>
+    <script src="./assets/resources/js/variables.js?v=0.9"></script>
+    <script src="./assets/resources/js/functions.js?v=0.9"></script>
+    <script src="./assets/resources/js/events.js?v=0.9"></script>
+    <script src="./assets/resources/js/main.js?v=0.9"></script>
+  </body>
+</html>
